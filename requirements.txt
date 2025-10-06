@@ -19,3 +19,6 @@ requests
 # Streamlit dependencies
 streamlit
 plotly
+joblib
+python-multipart
+python-dotenv
