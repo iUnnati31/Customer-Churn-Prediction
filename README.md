@@ -1,4 +1,4 @@
-# 📊 Customer Churn Prediction System
+## 📊 Customer Churn Prediction System
 
 A complete end-to-end machine learning project for predicting customer churn in the IT/Telecom industry. The project includes comprehensive exploratory data analysis (EDA), multiple ML model training with hyperparameter tuning, and a production-ready FastAPI backend for serving predictions.
 
