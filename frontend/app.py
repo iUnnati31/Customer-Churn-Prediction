@@ -94,7 +94,7 @@ API_URL = "https://customer-churn-prediction-07qv.onrender.com"
 def check_api_health():
     """Check if API is running"""
     try:
-        response = requests.get(f"{API_URL}/health", timeout=2)
+        response = requests.get(f"{API_URL}/health", timeout=60)
         return response.status_code == 200
     except:
         return False
@@ -205,9 +205,9 @@ def main():
 
     if not api_status:
         st.error(
-            "⚠️ Cannot connect to the API. Please make sure the backend is running on http://localhost:8000"
+            f"⚠️ Cannot connect to the API. Please make sure the backend is running on {API_URL}"
         )
-        st.info("Run: `uvicorn backend.main:app --reload --host 0.0.0.0 --port 8000`")
+        st.info("If the backend is on Render, it may be waking up from sleep. Please wait a moment and refresh.")
         return
 
     # Sidebar
